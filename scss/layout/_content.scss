@@ -1,0 +1,88 @@
+@use '../abstracts' as a;
+
+.content {
+  text-align: center;
+  margin-bottom: a.pixelToRem(64);
+}
+
+.grid-container {
+  $padding-left-right: clamp(
+    a.pixelToRem(10),
+    a.pixelToRem(10) + 2vw,
+    a.pixelToRem(80)
+  );
+
+  display: grid;
+  gap: a.pixelToRem(10);
+  padding: 0 $padding-left-right 0 $padding-left-right;
+
+  @include a.breakpoint(medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include a.breakpoint(large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__element {
+    padding: a.pixelToRem(64);
+    border-radius: a.pixelToRem(20);
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--bg-beige {
+      @extend .grid-container__element;
+      background-color: var(--beige);
+    }
+    &--bg-black {
+      @extend .grid-container__element;
+      background-color: var(--black);
+    }
+    &--bg-blue {
+      @extend .grid-container__element;
+      background-color: var(--blue);
+    }
+    &--bg-brown {
+      @extend .grid-container__element;
+      background-color: var(--brown);
+    }
+    &--bg-gray {
+      @extend .grid-container__element;
+      background-color: var(--gray);
+    }
+    &--bg-green {
+      @extend .grid-container__element;
+      background-color: var(--green);
+    }
+    &--bg-orange {
+      @extend .grid-container__element;
+      background-color: var(--orange);
+    }
+    &--bg-pink {
+      @extend .grid-container__element;
+      background-color: var(--pink);
+    }
+    &--bg-purple {
+      @extend .grid-container__element;
+      background-color: var(--purple);
+    }
+    &--bg-red {
+      @extend .grid-container__element;
+      background-color: var(--red);
+    }
+    &--bg-white {
+      @extend .grid-container__element;
+      background-color: var(--white);
+    }
+    &--bg-yellow {
+      @extend .grid-container__element;
+      background-color: var(--yellow);
+    }
+  }
+}
+
+.black-text {
+  color: var(--black);
+}

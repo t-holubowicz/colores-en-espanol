@@ -4,9 +4,11 @@
 
 ## Screenshots
 
-![Screenshot-1](images/ss1.png)
-![Screenshot-2](images/ss2.png)
-![Screenshot-3](images/ss3.png)
+![Screenshot-1](screenshots/ss1.png)
+
+![Screenshot-2](screenshots/ss2.png)
+
+![Screenshot-3](screenshots/ss3.png)
 
 <!-- LINKS -->
 

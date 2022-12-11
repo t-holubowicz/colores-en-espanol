@@ -1,0 +1,12 @@
+@use '../abstracts' as a;
+
+.footer {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: a.pixelToRem(3);
+  background-color: var(--orange);
+  font-size: a.pixelToRem(13);
+  text-align: center;
+}
