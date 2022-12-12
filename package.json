@@ -1,0 +1,14 @@
+{
+  "name": "colores-en-espanol",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "sass --watch scss/main.scss css/main.css",
+    "build": "sass scss/main.scss css/main.css"
+  },
+  "repository": "https://github.com/t-holubowicz/colores-en-espanol.git",
+  "author": "Tymoteusz Hołubowicz",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.56.2"
+  }
+}
