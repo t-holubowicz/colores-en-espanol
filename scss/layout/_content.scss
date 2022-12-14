@@ -1,20 +1,21 @@
 @use '../abstracts' as a;
 
+$elementBgModifiers: 'beige', 'black', 'blue', 'brown', 'gray', 'green',
+  'orange', 'pink', 'purple', 'red', 'white', 'yellow';
+
 .content {
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin-bottom: a.pixelToRem(64);
 }
 
 .grid-container {
-  $padding-left-right: clamp(
-    a.pixelToRem(10),
-    a.pixelToRem(10) + 2vw,
-    a.pixelToRem(80)
-  );
-
   display: grid;
   gap: a.pixelToRem(10);
-  padding: 0 $padding-left-right 0 $padding-left-right;
+  width: calc(
+    100% - clamp(a.pixelToRem(20), a.pixelToRem(10) + 8vw, a.pixelToRem(160))
+  );
 
   @include a.breakpoint(medium) {
     grid-template-columns: repeat(2, 1fr);
@@ -32,53 +33,12 @@
       cursor: pointer;
     }
 
-    &--bg-beige {
-      @extend .grid-container__element;
-      background-color: var(--beige);
-    }
-    &--bg-black {
-      @extend .grid-container__element;
-      background-color: var(--black);
-    }
-    &--bg-blue {
-      @extend .grid-container__element;
-      background-color: var(--blue);
-    }
-    &--bg-brown {
-      @extend .grid-container__element;
-      background-color: var(--brown);
-    }
-    &--bg-gray {
-      @extend .grid-container__element;
-      background-color: var(--gray);
-    }
-    &--bg-green {
-      @extend .grid-container__element;
-      background-color: var(--green);
-    }
-    &--bg-orange {
-      @extend .grid-container__element;
-      background-color: var(--orange);
-    }
-    &--bg-pink {
-      @extend .grid-container__element;
-      background-color: var(--pink);
-    }
-    &--bg-purple {
-      @extend .grid-container__element;
-      background-color: var(--purple);
-    }
-    &--bg-red {
-      @extend .grid-container__element;
-      background-color: var(--red);
-    }
-    &--bg-white {
-      @extend .grid-container__element;
-      background-color: var(--white);
-    }
-    &--bg-yellow {
-      @extend .grid-container__element;
-      background-color: var(--yellow);
+    // Creating .grid-container__element background color modifiers
+    @each $color in $elementBgModifiers {
+      &--bg-#{$color} {
+        @extend .grid-container__element;
+        background-color: var(--#{$color});
+      }
     }
   }
 }
