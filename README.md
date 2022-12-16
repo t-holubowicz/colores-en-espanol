@@ -2,13 +2,18 @@
 
 [_Colores en Español_][website] is a page that represents colors in Spanish. It's made to learn colors in Spanish.
 
+---
+
 ## Screenshots
 
-![Screenshot-1](screenshots/ss1.png)
+![Screenshot](images/screenshot.png)
 
-![Screenshot-2](screenshots/ss2.png)
+---
 
-![Screenshot-3](screenshots/ss3.png)
+## Requirements
+
+- Node
+- Installed all packages in packages.json (`npm i` or `yarn install`)
 
 <!-- LINKS -->
 

@@ -1,5 +1,7 @@
 @use 'sass:math';
 
+// Function that turn pixels to rems
+// If unit was used in function, logs an error
 @function pixelToRem($pixel) {
   @if math.is-unitless($pixel) {
     @return math.div($pixel, 16) + rem;
@@ -8,6 +10,8 @@
   }
 }
 
+// Function that turn pixels to ems
+// If unit was used in function, logs an error
 @function pixelToEm($pixel) {
   @if math.is-unitless($pixel) {
     @return math.div($pixel, 16) + em;

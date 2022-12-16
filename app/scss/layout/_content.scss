@@ -13,9 +13,7 @@ $elementBgModifiers: 'beige', 'black', 'blue', 'brown', 'gray', 'green',
 .grid-container {
   display: grid;
   gap: a.pixelToRem(10);
-  width: calc(
-    100% - clamp(a.pixelToRem(20), a.pixelToRem(10) + 8vw, a.pixelToRem(160))
-  );
+  width: min(90%, a.pixelToRem(1400));
 
   @include a.breakpoint(medium) {
     grid-template-columns: repeat(2, 1fr);
