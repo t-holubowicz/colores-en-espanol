@@ -10,11 +10,13 @@
     padding: a.pixelToRem(32);
   }
 
+  // Text with color change animation
   &__title {
     animation: colorRotate 5s linear 0s infinite;
   }
 }
 
+// Text color change animation
 @keyframes colorRotate {
   from {
     color: var(--purple);
