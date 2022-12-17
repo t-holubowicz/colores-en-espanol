@@ -1,5 +1,9 @@
 @use '../abstracts' as a;
 
+$fontSizeH1: clamp(a.pixelToRem(28), a.pixelToRem(18) + 4vw, a.pixelToRem(48));
+$fontSizeP: a.pixelToRem(16);
+$fontSizeB: a.pixelToRem(16);
+
 h1,
 h2,
 h3 {
@@ -10,7 +14,7 @@ h3 {
 
 h1 {
   // font-size: clamp(a.pixelToRem(28), a.pixelToRem(16) + 2vw, a.pixelToRem(40));
-  font-size: clamp(a.pixelToRem(28), a.pixelToRem(18) + 4vw, a.pixelToRem(48));
+  font-size: $fontSizeH1;
 }
 
 // h2 {
@@ -19,11 +23,11 @@ h1 {
 
 p {
   // margin-top: 0;
-  font-size: a.pixelToRem(16);
+  font-size: $fontSizeP;
 }
 
 b {
-  font-size: a.pixelToRem(16);
+  font-size: $fontSizeB;
 }
 
 // a,

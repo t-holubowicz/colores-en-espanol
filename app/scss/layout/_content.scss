@@ -1,7 +1,5 @@
 @use '../abstracts' as a;
-
-$elementBgModifiers: 'beige', 'black', 'blue', 'brown', 'gray', 'green',
-  'orange', 'pink', 'purple', 'red', 'white', 'yellow';
+@use '../base' as b;
 
 .content {
   display: flex;
@@ -32,10 +30,35 @@ $elementBgModifiers: 'beige', 'black', 'blue', 'brown', 'gray', 'green',
     }
 
     // Creating .grid-container__element background color modifiers
-    @each $color in $elementBgModifiers {
+    @each $color in a.$gridContainerElementBgModifiers {
       &--bg-#{$color} {
         @extend .grid-container__element;
         background-color: var(--#{$color});
+
+        position: relative;
+        &::before {
+          content: map-get(
+            a.$phoneticPronunciation,
+            map-get(a.$englishToSpanish, $color)
+          );
+          // Centering ::before in the center, then putting down for 20px
+          position: absolute;
+          top: 6;
+          margin-top: a.pixelToRem(22);
+          margin-left: auto;
+          margin-right: auto;
+          // Text look
+          opacity: 0.7;
+          transition: opacity 150ms ease-in-out;
+
+          // Accessability for mobile devices
+          @include a.breakpoint(large) {
+            opacity: 0;
+          }
+        }
+        &:hover::before {
+          opacity: 0.7;
+        }
       }
     }
   }

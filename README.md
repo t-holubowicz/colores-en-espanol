@@ -13,7 +13,7 @@
 ## Requirements
 
 - Node
-- Installed all packages in packages.json (`npm i` or `yarn install`)
+- Installed all packages used in packages.json (run: `npm i` or `yarn install`)
 
 <!-- LINKS -->
 

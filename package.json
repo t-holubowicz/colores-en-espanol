@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "sass --watch app/scss/main.scss app/css/main.css",
-    "build": "sass app/scss/main.scss app/css/main.css",
-    "clear": "rm -rf node_modules app/css"
+    "build:scss": "sass app/scss/main.scss app/css/main.css",
+    "build": "sass app/scss/main.scss app/css/main.css && rm -rf dist && mkdir dist && cp app/index.html dist/index.html && cp -R app/assets dist/assets && cp -R app/js dist/js && cp -R app/css dist/css",
+    "clear": "rm -rf node_modules app/css dist"
   },
   "repository": "https://github.com/t-holubowicz/colores-en-espanol.git",
   "author": "Tymoteusz Hołubowicz",
