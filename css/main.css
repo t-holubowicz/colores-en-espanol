@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --beige: #f5f5dc;
   --black: #000000;
@@ -57,6 +58,8 @@ b {
 }
 
 .content {
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin-bottom: 4rem;
 }
@@ -64,7 +67,7 @@ b {
 .grid-container {
   display: grid;
   gap: 0.625rem;
-  padding: 0 clamp(0.625rem, 0.625rem + 2vw, 5rem) 0 clamp(0.625rem, 0.625rem + 2vw, 5rem);
+  width: min(90%, 87.5rem);
 }
 @media (min-width: 43.75em) {
   .grid-container {
@@ -85,39 +88,267 @@ b {
 }
 .grid-container__element--bg-beige {
   background-color: var(--beige);
+  position: relative;
+}
+.grid-container__element--bg-beige::before {
+  content: "beis";
+  position: absolute;
+  top: 6;
+  margin-top: 1.375rem;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.7;
+  transition: opacity 150ms ease-in-out;
+}
+@media (min-width: 56.25em) {
+  .grid-container__element--bg-beige::before {
+    opacity: 0;
+  }
+}
+.grid-container__element--bg-beige:hover::before {
+  opacity: 0.7;
 }
 .grid-container__element--bg-black {
   background-color: var(--black);
+  position: relative;
+}
+.grid-container__element--bg-black::before {
+  content: "neɣɾo";
+  position: absolute;
+  top: 6;
+  margin-top: 1.375rem;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.7;
+  transition: opacity 150ms ease-in-out;
+}
+@media (min-width: 56.25em) {
+  .grid-container__element--bg-black::before {
+    opacity: 0;
+  }
+}
+.grid-container__element--bg-black:hover::before {
+  opacity: 0.7;
 }
 .grid-container__element--bg-blue {
   background-color: var(--blue);
+  position: relative;
+}
+.grid-container__element--bg-blue::before {
+  content: "aθul";
+  position: absolute;
+  top: 6;
+  margin-top: 1.375rem;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.7;
+  transition: opacity 150ms ease-in-out;
+}
+@media (min-width: 56.25em) {
+  .grid-container__element--bg-blue::before {
+    opacity: 0;
+  }
+}
+.grid-container__element--bg-blue:hover::before {
+  opacity: 0.7;
 }
 .grid-container__element--bg-brown {
   background-color: var(--brown);
+  position: relative;
+}
+.grid-container__element--bg-brown::before {
+  content: "maron";
+  position: absolute;
+  top: 6;
+  margin-top: 1.375rem;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.7;
+  transition: opacity 150ms ease-in-out;
+}
+@media (min-width: 56.25em) {
+  .grid-container__element--bg-brown::before {
+    opacity: 0;
+  }
+}
+.grid-container__element--bg-brown:hover::before {
+  opacity: 0.7;
 }
 .grid-container__element--bg-gray {
   background-color: var(--gray);
+  position: relative;
+}
+.grid-container__element--bg-gray::before {
+  content: "gɾis";
+  position: absolute;
+  top: 6;
+  margin-top: 1.375rem;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.7;
+  transition: opacity 150ms ease-in-out;
+}
+@media (min-width: 56.25em) {
+  .grid-container__element--bg-gray::before {
+    opacity: 0;
+  }
+}
+.grid-container__element--bg-gray:hover::before {
+  opacity: 0.7;
 }
 .grid-container__element--bg-green {
   background-color: var(--green);
+  position: relative;
+}
+.grid-container__element--bg-green::before {
+  content: "beɾðe";
+  position: absolute;
+  top: 6;
+  margin-top: 1.375rem;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.7;
+  transition: opacity 150ms ease-in-out;
+}
+@media (min-width: 56.25em) {
+  .grid-container__element--bg-green::before {
+    opacity: 0;
+  }
+}
+.grid-container__element--bg-green:hover::before {
+  opacity: 0.7;
 }
 .grid-container__element--bg-orange {
   background-color: var(--orange);
+  position: relative;
+}
+.grid-container__element--bg-orange::before {
+  content: "naɾaŋχa";
+  position: absolute;
+  top: 6;
+  margin-top: 1.375rem;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.7;
+  transition: opacity 150ms ease-in-out;
+}
+@media (min-width: 56.25em) {
+  .grid-container__element--bg-orange::before {
+    opacity: 0;
+  }
+}
+.grid-container__element--bg-orange:hover::before {
+  opacity: 0.7;
 }
 .grid-container__element--bg-pink {
   background-color: var(--pink);
+  position: relative;
+}
+.grid-container__element--bg-pink::before {
+  content: "rosa";
+  position: absolute;
+  top: 6;
+  margin-top: 1.375rem;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.7;
+  transition: opacity 150ms ease-in-out;
+}
+@media (min-width: 56.25em) {
+  .grid-container__element--bg-pink::before {
+    opacity: 0;
+  }
+}
+.grid-container__element--bg-pink:hover::before {
+  opacity: 0.7;
 }
 .grid-container__element--bg-purple {
   background-color: var(--purple);
+  position: relative;
+}
+.grid-container__element--bg-purple::before {
+  content: "moɾaðo";
+  position: absolute;
+  top: 6;
+  margin-top: 1.375rem;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.7;
+  transition: opacity 150ms ease-in-out;
+}
+@media (min-width: 56.25em) {
+  .grid-container__element--bg-purple::before {
+    opacity: 0;
+  }
+}
+.grid-container__element--bg-purple:hover::before {
+  opacity: 0.7;
 }
 .grid-container__element--bg-red {
   background-color: var(--red);
+  position: relative;
+}
+.grid-container__element--bg-red::before {
+  content: "roχo";
+  position: absolute;
+  top: 6;
+  margin-top: 1.375rem;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.7;
+  transition: opacity 150ms ease-in-out;
+}
+@media (min-width: 56.25em) {
+  .grid-container__element--bg-red::before {
+    opacity: 0;
+  }
+}
+.grid-container__element--bg-red:hover::before {
+  opacity: 0.7;
 }
 .grid-container__element--bg-white {
   background-color: var(--white);
+  position: relative;
+}
+.grid-container__element--bg-white::before {
+  content: "blanko";
+  position: absolute;
+  top: 6;
+  margin-top: 1.375rem;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.7;
+  transition: opacity 150ms ease-in-out;
+}
+@media (min-width: 56.25em) {
+  .grid-container__element--bg-white::before {
+    opacity: 0;
+  }
+}
+.grid-container__element--bg-white:hover::before {
+  opacity: 0.7;
 }
 .grid-container__element--bg-yellow {
   background-color: var(--yellow);
+  position: relative;
+}
+.grid-container__element--bg-yellow::before {
+  content: "amaɾiʝo";
+  position: absolute;
+  top: 6;
+  margin-top: 1.375rem;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.7;
+  transition: opacity 150ms ease-in-out;
+}
+@media (min-width: 56.25em) {
+  .grid-container__element--bg-yellow::before {
+    opacity: 0;
+  }
+}
+.grid-container__element--bg-yellow:hover::before {
+  opacity: 0.7;
 }
 
 .black-text {
