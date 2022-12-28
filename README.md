@@ -37,7 +37,9 @@
   <a href="#license">License</a>
 </p>
 
-![Screenshot](images/screenshot.png)
+<p align="center">
+    <img src="images/website.gif" alt="Website">
+</p>
 
 ## Usage
 
@@ -47,7 +49,7 @@ Visit [Colores en Español website](https://t-holubowicz.github.io/colores-en-es
 
 - git
 - Node
-  - optionally Yarn
+  - Optionally Yarn
 
 ## Download website
 
