@@ -4,10 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: a.pixelToRem(20);
+  padding: a.pixel-to-rem(20);
 
   @include a.breakpoint(medium) {
-    padding: a.pixelToRem(32);
+    padding: a.pixel-to-rem(32);
   }
 
   // Text with color change animation

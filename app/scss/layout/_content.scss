@@ -5,13 +5,13 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-bottom: a.pixelToRem(64);
+  margin-bottom: a.pixel-to-rem(64);
 }
 
 .grid-container {
   display: grid;
-  gap: a.pixelToRem(10);
-  width: min(90%, a.pixelToRem(1400));
+  gap: a.pixel-to-rem(10);
+  width: min(90%, a.pixel-to-rem(1400));
 
   @include a.breakpoint(medium) {
     grid-template-columns: repeat(2, 1fr);
@@ -22,15 +22,15 @@
   }
 
   &__element {
-    padding: a.pixelToRem(64);
-    border-radius: a.pixelToRem(20);
+    padding: a.pixel-to-rem(64);
+    border-radius: a.pixel-to-rem(20);
 
     &:hover {
       cursor: pointer;
     }
 
     // Creating .grid-container__element background color modifiers
-    @each $color in a.$gridContainerElementBgModifiers {
+    @each $color in a.$grid-container-element-bg-modifiers {
       &--bg-#{$color} {
         @extend .grid-container__element;
         background-color: var(--#{$color});
@@ -38,13 +38,13 @@
         position: relative;
         &::before {
           content: map-get(
-            a.$phoneticPronunciation,
-            map-get(a.$englishToSpanish, $color)
+            a.$phonetic-pronunciation,
+            map-get(a.$english-to-spanish, $color)
           );
           // Centering ::before in the center, then putting down for 20px
           position: absolute;
           top: 6;
-          margin-top: a.pixelToRem(22);
+          margin-top: a.pixel-to-rem(22);
           margin-left: auto;
           margin-right: auto;
           // Text look

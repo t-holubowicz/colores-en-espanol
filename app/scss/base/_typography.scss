@@ -1,8 +1,8 @@
 @use '../abstracts' as a;
 
-$fontSizeH1: clamp(a.pixelToRem(28), a.pixelToRem(18) + 4vw, a.pixelToRem(48));
-$fontSizeP: a.pixelToRem(16);
-$fontSizeB: a.pixelToRem(16);
+$fontSizeH1: clamp(a.pixel-to-rem(28), a.pixel-to-rem(18) + 4vw, a.pixel-to-rem(48));
+$fontSizeP: a.pixel-to-rem(16);
+$fontSizeB: a.pixel-to-rem(16);
 
 h1,
 h2,
@@ -13,12 +13,12 @@ h3 {
 }
 
 h1 {
-  // font-size: clamp(a.pixelToRem(28), a.pixelToRem(16) + 2vw, a.pixelToRem(40));
+  // font-size: clamp(a.pixel-to-rem(28), a.pixel-to-rem(16) + 2vw, a.pixel-to-rem(40));
   font-size: $fontSizeH1;
 }
 
 // h2 {
-//   font-size: clamp(a.pixelToRem(22), a.pixelToRem(14) + 1.5vw, a.pixelToRem(36));
+//   font-size: clamp(a.pixel-to-rem(22), a.pixel-to-rem(14) + 1.5vw, a.pixel-to-rem(36));
 // }
 
 p {

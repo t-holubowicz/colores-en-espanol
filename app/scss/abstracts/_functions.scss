@@ -2,7 +2,7 @@
 
 // Function that turn pixels to rems
 // If unit was used in function, logs an error
-@function pixelToRem($pixel) {
+@function pixel-to-rem($pixel) {
   @if math.is-unitless($pixel) {
     @return math.div($pixel, 16) + rem;
   } @else {
@@ -12,7 +12,7 @@
 
 // Function that turn pixels to ems
 // If unit was used in function, logs an error
-@function pixelToEm($pixel) {
+@function pixel-to-em($pixel) {
   @if math.is-unitless($pixel) {
     @return math.div($pixel, 16) + em;
   } @else {

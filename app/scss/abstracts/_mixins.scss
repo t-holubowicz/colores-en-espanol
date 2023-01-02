@@ -5,17 +5,17 @@
 // 700px, 900px, 1440px
 // 43.75em, 56.25em, 90em
 $breakpoints-up: (
-  'medium': f.pixelToEm(700),
-  'large': f.pixelToEm(900),
-  'x-large': f.pixelToEm(1440),
+  'medium': f.pixel-to-em(700),
+  'large': f.pixel-to-em(900),
+  'x-large': f.pixel-to-em(1440),
 );
 
 // 699.98px, 899.98px, 1439.98px
 // 43.74875em, 56.24875em, 89.99875em
 // $breakpoints-down: (
-//   'small': f.pixelToEm(699.98),
-//   'medium': f.pixelToEm(899.98),
-//   'large': f.pixelToEm(1439.98),
+//   'small': f.pixel-to-em(699.98),
+//   'medium': f.pixel-to-em(899.98),
+//   'large': f.pixel-to-em(1439.98),
 // );
 
 // Short for media query, using table as breakpoints
